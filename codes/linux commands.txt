@@ -1,0 +1,26 @@
+------------------ common word remove from folder name ---------------
+
+find . -type d -name '1366x339*' | while read dir; do
+    newdir=$(echo "$dir" | sed 's/^\.\/1366x339 -//')
+    mv "$dir" "$newdir"
+done
+
+ find . -type d -name '1366x339*' | while read dir; do newdir=$(echo "$dir" | sed 's/^\.\/1366x339 //'); mv "$dir" "$newdir"; done
+
+------------------ common word remove from folder name end ---------------
+
+------------------ delete webp files from all the folders --------------
+
+find . -type f -name '*.webp' -delete
+
+------------------ delete webp files from all the folders end --------------
+
+------------------ removing space and hyphen ---------------------------
+
+find . -type f -name "*.jpeg" | while read -r file; do
+  dir=$(dirname "$file")
+  base=$(basename "$file")
+  newbase="${base//[- ]/_}"
+  mv "$file" "$dir/$newbase"
+done
+-------------------------------------------------------------------------

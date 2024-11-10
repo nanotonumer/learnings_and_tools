@@ -1,0 +1,18 @@
+https://releases.liferay.com/dxp/
+
+https://releases.liferay.com/tools/blade-cli/latest/
+
+https://github.com/liferay/liferay-blade-cli/releases
+
+For Installing the blade 
+
+1. need JPM(Java package manager) 
+cmd command : java -jar biz.aQute.jpm.run-4.0.0-20201026.162724-24.jar -g init
+-------> after run command will return below paths
+         Home dir      C:\JPM
+         Bin  dir      C:\JPM\bin
+-------> "C:\JPM\bin" this path need to confiqure on environment variables on both env paths
+2. this is the command to update blade 
+-------> "blade update"
+
+-------> Now we can uase blade for creating workspace and modules

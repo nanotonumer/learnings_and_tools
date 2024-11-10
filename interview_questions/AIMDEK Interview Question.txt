@@ -1,0 +1,17 @@
+1. What is indexing in Liferay?
+2. How can you call packages in web content templates?
+3. What is an action on objects?
+4. How does Elasticsearch work in Liferay?
+5. How can you map a custom service or table with Liferay objects?
+6. What is Liferay object?
+7. What is the status on OSGI after deploying fragments?
+8. For example, if we have both Spring and Liferay JAR files, how can you identify the JAR file for Liferay?
+9. What are modal listener hooks?
+10. What are the steps to create custom SQL? (Please also provide an example of custom SQL code.)
+11. What is a dynamic query?
+12. Where can we use custom SQL and dynamic queries?
+13. What is a headless API?
+14. What is a REST API?
+15. Once we expose the API, how do we control permissions for it in Liferay?
+16. What is portlet filter?
+17. What is Rank property?

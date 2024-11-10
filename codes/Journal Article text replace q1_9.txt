@@ -1,0 +1,30 @@
+import com.liferay.portal.kernel.util.WebKeys
+import com.liferay.portal.kernel.theme.ThemeDisplay
+import com.liferay.journal.model.JournalArticle
+import com.liferay.journal.service.JournalArticleLocalServiceUtil
+import com.liferay.portal.kernel.service.ServiceContext;
+ 
+ 
+def themeDisplay = actionRequest.getAttribute(WebKeys.THEME_DISPLAY) as ThemeDisplay
+List<JournalArticle> jaList = JournalArticleLocalServiceUtil.getArticles()
+ 
+out.println(jaList .size());
+def oldText = "Demo"
+def newText = "Umer Demo"
+ 
+jaList.each { ja ->
+	def groupId = ja.getGroupId()
+	ServiceContext serviceContext = new ServiceContext();
+	serviceContext.setScopeGroupId(groupId);
+	serviceContext.setUserId(themeDisplay.getUserId());
+    def articleContent = ja.getContent()
+    def updatedContent = articleContent.replaceAll(oldText, newText)
+	out.println("GroupId" + groupId);
+	try {
+	
+    JournalArticleLocalServiceUtil.updateArticle(ja.getUserId(), groupId, ja.getFolderId(), ja.getArticleId(), ja.getVersion(), updatedContent, serviceContext)
+		out.println("Updated ja.getArticleId(): " + ja.getArticleId());
+	} catch (Exception e) {
+		out.println(e.getMessage());
+	}
+}

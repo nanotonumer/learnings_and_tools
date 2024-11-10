@@ -1,0 +1,4 @@
+String workSectorMasterUrl =  themeDisplay.getPortalURL() + MVCCommandNames.WORK_SECTOR_TYPE_URL  + CommonConstants.SCOPES + StringPool.SLASH + 
+				themeDisplay.getScopeGroupId() + StringPool.QUESTION + "filter=workSectorType" 
+				+URLEncoder.encode(" eq " + "'"+ workSectorType+ "' and workSectorParentId eq 0" , StandardCharsets.UTF_8) + "&sort=workSector:asc&pageSize=0";
+		String workSectorMasterUrlResponse = commonApi.getData(workSectorMasterUrl);

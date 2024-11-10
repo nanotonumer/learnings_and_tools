@@ -1,0 +1,19 @@
+By using this code to create render URL by script
+
+Liferay.Util.PortletURL.createRenderURL(themeDisplay.getLayoutURL(), {
+	p_p_id: Liferay.Util.getPortletId("_etlireacttwo_INSTANCE_pQM3dhn1Szhj_"),
+	p_p_lifecycle: 0, // Render phase
+	p_p_state: 'normal',
+	p_p_mode: 'view',
+	jspPage: '/home.jsp',
+}).href
+
+
+By using this code to create resource URL by script
+Liferay.Util.PortletURL.createResourceURL(themeDisplay.getLayoutURL(),{
+    p_p_id: Liferay.Util.getPortletId('_etliskcsbreactweb_INSTANCE_nfum_[portletNamespace]'),
+    p_p_lifecycle: 2, // Resource phase
+    p_p_state: 'normal',
+    p_p_mode: 'view',
+    p_p_resource_id: 'etliskcsbreactweb/student/list'
+    }).href

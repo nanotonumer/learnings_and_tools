@@ -1,0 +1,5 @@
+blade create help
+blade create -t mvc-portlet -p [pacakge-name] [project-name]
+blade create -t npm-react-portlet -p [pacakge-name] [project-name]
+
+blade init -v {liferay-version} my-liferay-workspace
