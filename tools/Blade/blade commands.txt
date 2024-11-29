@@ -2,4 +2,7 @@ blade create help
 blade create -t mvc-portlet -p [pacakge-name] [project-name]
 blade create -t npm-react-portlet -p [pacakge-name] [project-name]
 
+fragments:
+blade create -t fragment -h [bundle-symbolic-name] -H[bundle-version]
+
 blade init -v {liferay-version} my-liferay-workspace
