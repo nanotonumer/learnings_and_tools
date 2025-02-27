@@ -1,0 +1,2 @@
+./elasticsearch -d -p pid
+netstat -an | grep 9201
